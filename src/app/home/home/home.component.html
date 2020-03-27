@@ -1,1 +1,24 @@
+<ActionBar title = "Places">
+</ActionBar>
+
+<GridLayout>
+  <listView [items]="places">
+    <ng-template let-item="item">
+      <stackLayout>
+        <label [text]="item.company_name"></label>
+        <label [text]="item.name"></label>
+        <label [text]="item.phone_numeber"></label>
+        <label [text]="item.mobile_phone"></label>
+        <label [text]="item.categoria"></label>
+        <label [text]="item.website"></label>
+        <label [text]="item.email"></label>
+        <label [text]="item.schedule"></label>
+        <label [text]="item.photos"></label>
+        <label [text]="item.features"></label>
+        <label [text]="item.keywords"></label>
+      </stackLayout>
+    </ng-template>
+  </listView>
+</GridLayout>
+
 <Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button>
