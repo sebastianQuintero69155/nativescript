@@ -2,9 +2,9 @@
 </ActionBar>
 
 <GridLayout>
-  <listView [items]="places">
+  <ListView [items]="places">
     <ng-template let-item="item">
-      <stackLayout>
+      <StackLayout>
         <label [text]="item.company_name"></label>
         <label [text]="item.name"></label>
         <label [text]="item.phone_numeber"></label>
@@ -16,9 +16,9 @@
         <label [text]="item.photos"></label>
         <label [text]="item.features"></label>
         <label [text]="item.keywords"></label>
-      </stackLayout>
+      </StackLayout>
     </ng-template>
-  </listView>
+  </ListView>
 </GridLayout>
 
 <Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button>
