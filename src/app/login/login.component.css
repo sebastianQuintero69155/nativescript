@@ -1,11 +1,11 @@
 /* Add mobile styles for the component here.  */
 .login{
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 .uname, .psw{
   width: 50%;
   height: 10px;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
