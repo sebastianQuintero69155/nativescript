@@ -36,4 +36,9 @@ export class HomeComponent implements OnInit {
       okButtonText: "ok",
       message: message});
   }
+
+  irCamara()
+  {
+    this.routerExtension.navigate(["/home/camara"],{});
+  }
 }
