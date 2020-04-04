@@ -1,4 +1,8 @@
 <ActionBar title = "Places">
+  <ActionItem android.systemIcon="ic_menu_back" android.position="right" 
+    ios.systemIcon="ic_menu_back" ios.position="right"
+    (tap) ="salir()" text="Salir">
+  </ActionItem>
 </ActionBar>
 
 <GridLayout>
@@ -20,5 +24,3 @@
     </ng-template>
   </ListView>
 </GridLayout>
-
-<Button text="Salir" (tap)="salir()" class="btn btn-primary"></Button>
