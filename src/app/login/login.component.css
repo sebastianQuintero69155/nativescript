@@ -1,11 +1,28 @@
 /* Add mobile styles for the component here.  */
 .login{
-  background-color: #000000;
+  margin-top: 10%;
 }
 
-.uname, .psw{
-  width: 50%;
-  height: 10px;
-  background-color: #000000;
+.tittle-login{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0.1px;
+  margin-bottom: 10%;
 }
 
+.input-email, .input-pass {
+  width: 65%;
+}
+
+.tittle-email, .tittle-pass{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.principal-image{
+  width: 600px;
+  height: 600px;
+  margin-bottom: 10%;
+}
