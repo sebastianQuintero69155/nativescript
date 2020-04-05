@@ -7,7 +7,7 @@ import { CamaraComponent } from '../camara/camara.component';
 
 const routes: Routes = [
   { path:"", component: HomeComponent},
-  { path: "camara", component: CamaraComponent }
+  { path: "camara", component: CamaraComponent, data:{title: "Camara app Hogar"} }
 ];
 
 @NgModule({
