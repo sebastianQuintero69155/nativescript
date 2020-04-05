@@ -1,23 +1,26 @@
 <FlexboxLayout class="page">
-    <StackLayout class="form">
-        <PreviousNextView>
-            <GridLayout rows="auto, auto, auto">
-                <StackLayout row="0" class="input-field">
-                    <textField class="input" hint="Email" keyboardType="email" autocorrect="false" 
-                        autocapitalize="none"
-                        [(ngModel)]= "user.email">
-                    </textField>
-                </StackLayout>
-
-                <StackLayout row="1" class="input-field">
-                    <textField secure="true" class="input" hint="Password"  autocorrect="false" 
-                        autocapitalize="none"
-                        [(ngModel)]= "user.contrasenia">
-                    </textField>
-                </StackLayout>
-                <ActivityIndicator rowspan="2" [busy]="isBusy" color="#365a95" width="100" height="100" (busyChange)="onBusyChanged($event)"></ActivityIndicator>
-            </GridLayout>
-        </PreviousNextView>
-        <Button [isEnabled]="!isBusy" text="Ingresar" (tap)="ingresar()" class="btn btn-primary"></Button>
-    </StackLayout>
+	<StackLayout class="form login">
+		<Image class="principal-image" src="https://previews.123rf.com/images/marysan9/marysan91907/marysan9190700039/127823099-smart-home-automation-vector-background-connected-smart-home-devices-like-phone-smart-watch-tablet-s.jpg" ></Image>
+		<PreviousNextView>
+			<Label textWrap="true" text="Login" class="tittle-login"></Label>
+			<GridLayout rows="auto, auto, auto, auto, auto" colspan="auto, auto">
+				<Label row="0" colspan="1" textWrap="true" text="Email" class="tittle-email"></Label>
+				<StackLayout row="1" colspan="1" class="input-field">
+					<textField class="input-email" hint="Email" keyboardType="email" autocorrect="false" 
+						autocapitalize="none"
+						[(ngModel)]= "user.email">
+					</textField>
+				</StackLayout>
+				<Label row="3" colspan="1" textWrap="true" text="Contraseña" class="tittle-pass"></Label>
+				<StackLayout row="4" colpsan="1" class="input-field">
+					<textField secure="true" class="input-pass" hint="Password"  autocorrect="false" 
+						autocapitalize="none"
+						[(ngModel)]= "user.contrasenia">
+					</textField>
+				</StackLayout>
+				<ActivityIndicator rowspan="2" [busy]="isBusy" color="#365a95" width="100" height="100" (busyChange)="onBusyChanged($event)"></ActivityIndicator>
+			</GridLayout>
+		</PreviousNextView>
+		<Button [isEnabled]="!isBusy" text="Ingresar" (tap)="ingresar()" class="btn btn-primary"></Button>
+	</StackLayout>
 </FlexboxLayout>
