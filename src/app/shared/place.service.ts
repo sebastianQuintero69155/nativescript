@@ -1,25 +1,25 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { getString} from 'tns-core-modules/application-settings';
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { getString } from "tns-core-modules/application-settings";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class PlaceService {
   private serverUrl = "https://urbanoprofundizacion.herokuapp.com/";
 
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getPlaces(){
+  getPlaces() {
     let headers = this.crearRequestHeader();
-    return this. http.get(this.serverUrl + "api/places", {headers});
+    return this.http.get(this.serverUrl + "api/places", { headers });
   }
-  
-  private crearRequestHeader(){
+
+  private crearRequestHeader() {
     let headers = new HttpHeaders({
-      "Authorization": "Bearer " + getString("token"),
-      "Content-Type" : "application/json" 
-    }); 
+      Authorization: "Bearer " + getString("token"),
+      "Content-Type": "application/json",
+    });
     return headers;
   }
 }

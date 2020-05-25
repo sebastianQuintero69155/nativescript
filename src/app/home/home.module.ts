@@ -4,10 +4,11 @@ import { HomeRoutingModule } from './home-routing.module';
 import { NativeScriptCommonModule } from 'nativescript-angular/common';
 import { HomeComponent } from './home/home.component';
 import { CamaraComponent } from '../camara/camara.component';
+import { LuminariasComponent } from '../luminarias/luminarias.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, CamaraComponent],
+  declarations: [HomeComponent, CamaraComponent, LuminariasComponent],
   imports: [
     HomeRoutingModule,
     NativeScriptCommonModule

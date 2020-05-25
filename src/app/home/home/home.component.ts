@@ -41,4 +41,9 @@ export class HomeComponent implements OnInit {
   {
     this.routerExtension.navigate(["/home/camara"],{});
   }
+
+  irLuminarias()
+  {
+    this.routerExtension.navigate(["/home/luminaria"],{});
+  }
 }
