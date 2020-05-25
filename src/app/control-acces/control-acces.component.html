@@ -1,0 +1,14 @@
+<ActionBar title="Control de Acceso">
+    <ActionItem android.systemIcon="ic_menu_back" android.position="right" ios.systemIcon="ic_menu_back" ios.position="right" (tap)="salir()" text="Salir">
+    </ActionItem>
+</ActionBar>
+<GridLayout>
+    <ListView [items]="accesos">
+        <ng-template let-item="item">
+            <StackLayout>
+                <label [text]="item.name"></label>
+                <label [text]="item.state"></label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>

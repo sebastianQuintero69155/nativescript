@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
+
 @Injectable({
   providedIn: "root",
 })
@@ -8,7 +9,7 @@ export class LuminariaService {
   private urlAPIRasberryJuan = "https://pottiest-platypus-0746.dataplicity.io/";
   private urlAPIRasberrySebas = "https://unabashed-cockroach-6510.dataplicity.io/";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, ) {}
 
   postLuminaria1(data: any) {
     let headers = new HttpHeaders({
@@ -45,4 +46,5 @@ export class LuminariaService {
       headers: headers,
     });
   }
+ 
 }
