@@ -14,6 +14,7 @@ import { LoginComponent } from "./login/login.component";
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
 
+
 @NgModule({
   bootstrap: [AppComponent],
   imports: [
@@ -29,6 +30,7 @@ import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
     ItemsComponent,
     ItemDetailComponent,
     LoginComponent,
+    
   ],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],

@@ -46,4 +46,8 @@ export class HomeComponent implements OnInit {
   {
     this.routerExtension.navigate(["/home/luminaria"],{});
   }
+  
+  irContolAcces(){
+    this.routerExtension.navigate(["/home/controlacces"],{});
+  }
 }

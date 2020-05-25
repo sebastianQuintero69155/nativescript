@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { LuminariaService } from "../shared/luminaria.service";
 import { EventData } from 'tns-core-modules/data/observable';
 import { Switch } from "tns-core-modules/ui/switch";
+import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
   selector: "ns-luminarias",
@@ -13,7 +14,7 @@ export class LuminariasComponent implements OnInit {
   public luzUno: boolean;
   public message: string = "";
 
-  constructor(private luminariaService: LuminariaService) {}
+  constructor(private luminariaService: LuminariaService, private routerExtension: RouterExtensions) {}
 
   ngOnInit(): void {}
 
@@ -72,6 +73,10 @@ export class LuminariasComponent implements OnInit {
         this.message = (<any>res).json.data.state;
       });
     }
+  }
+  salir()
+  {
+    this.routerExtension.navigate(["/home/"], {clearHistory: true});
   }
   
 }
