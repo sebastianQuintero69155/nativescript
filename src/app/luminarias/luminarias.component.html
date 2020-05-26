@@ -1,17 +1,42 @@
 <ActionBar title="Luces Vivienda">
-    <ActionItem android.systemIcon="ic_menu_back" android.position="right" ios.systemIcon="ic_menu_back" ios.position="right" (tap)="salir()" text="Salir">
-    </ActionItem>
+  <ActionItem android.systemIcon="ic_menu_back" android.position="right" ios.systemIcon="ic_menu_back" ios.position="right" (tap)="salir()" text="Salir">
+  </ActionItem>
 </ActionBar>
-<ScrollView sdkExampleTitle sdkToggleNavButton>
 
-    <FlexboxLayout flexDirection="column-reverse">
+<GridLayout  class="luminarias">
+  <ScrollView sdkExampleTitle sdkToggleNavButton>
+    <StackLayout>
+      <GridLayout columns="*,*" rows="*,*,*,*">
+        <Label text="Led Juan 1" row="0" col="0"
+            class="resultado">
+        </Label>
+        <Switch checked="false" (checkedChange)="LuminariaUnoEncender($event)" 
+          row="0" col="1" >
+        </Switch>
 
-        <Switch checked="false" (checkedChange)="LuminariaCuatroEncender($event)"></Switch>
-        <Switch checked="false" (checkedChange)="LuminariaTresEncender($event)"></Switch>
-        <Switch checked="false" (checkedChange)="LuminariaUnoEncender($event)"></Switch>
-        <Switch checked="false" (checkedChange)="LuminariaDosEncender($event)"></Switch>
+        <Label text="Led Juan 2" row="1" col="0"
+            class="resultado">
+        </Label>
+        <Switch checked="false" (checkedChange)="LuminariaDosEncender($event)" 
+          row="1" col="1" >
+        </Switch>
 
+        <Label text="Led Sebastian 1" row="2" col="0"
+            class="resultado">
+        </Label>
+        <Switch checked="false" (checkedChange)="LuminariaTresEncender($event)" 
+          row="2" col="1" >
+        </Switch>
 
-    </FlexboxLayout>
+        <Label text="Led Sebastian 2" row="3" col="0"
+          class="resultado">
+        </Label>
+        <Switch checked="false" (checkedChange)="LuminariaCuatroEncender($event)" 
+          row="3" col="1" >
+        </Switch>
+      </GridLayout>
+    </StackLayout>
+  </ScrollView>
+</GridLayout>
 
-</ScrollView>
+<Image class="um-image" src="https://domotizados.co/wp-content/uploads/2017/12/domotica-control-iluminacion.jpg" ></Image>
