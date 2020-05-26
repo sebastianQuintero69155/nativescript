@@ -1,30 +1,15 @@
-<ActionBar title="Places">
-    <ActionItem android.systemIcon="sym_contact_card" ios.position="left" android.position="left" (tap)="irContolAcces()" text="Acceso">
-    </ActionItem>
-    <ActionItem android.systemIcon="ic_menu_view" ios.position="left" android.position="left" (tap)="irLuminarias()" text="Luminaria">
-    </ActionItem>
-    <ActionItem android.systemIcon="ic_menu_camera" ios.position="left" android.position="left" (tap)="irCamara()" text="Cámara">
-    </ActionItem>
-    <ActionItem android.systemIcon="ic_menu_back" android.position="right" ios.systemIcon="ic_menu_back" ios.position="right" (tap)="salir()" text="Salir">
-    </ActionItem>
+<ActionBar title="Inicio">
+  <ActionItem android.systemIcon="ic_lock_lock" ios.position="left" android.position="left" (tap)="irContolAcces()" text="Acceso">
+  </ActionItem>
+  <ActionItem android.systemIcon="ic_menu_view" ios.position="left" android.position="left" (tap)="irLuminarias()" text="Luminaria">
+  </ActionItem>
+  <ActionItem android.systemIcon="ic_menu_camera" ios.position="left" android.position="left" (tap)="irCamara()" text="Cámara">
+  </ActionItem>
+  <ActionItem android.systemIcon="ic_menu_back" android.position="right" ios.systemIcon="ic_menu_back" ios.position="right" (tap)="salir()" text="Salir">
+  </ActionItem>
 </ActionBar>
 
-<GridLayout>
-    <ListView [items]="places">
-        <ng-template let-item="item">
-            <StackLayout>
-                <label [text]="item.company_name"></label>
-                <label [text]="item.name"></label>
-                <label [text]="item.phone_numeber"></label>
-                <label [text]="item.mobile_phone"></label>
-                <label [text]="item.categoria"></label>
-                <label [text]="item.website"></label>
-                <label [text]="item.email"></label>
-                <label [text]="item.schedule"></label>
-                <label [text]="item.photos"></label>
-                <label [text]="item.features"></label>
-                <label [text]="item.keywords"></label>
-            </StackLayout>
-        </ng-template>
-    </ListView>
-</GridLayout>
+<div>
+  <Label text="Proyecto realizado por Juan Fernando Tabares Ocampo y Sebastian Quintero García" class="info" textWrap="true" > </Label>
+  <Image class="um-image" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Universidad-de-manizales-logo.jpg" ></Image>
+</div>
